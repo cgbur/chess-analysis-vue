@@ -12,6 +12,16 @@ html, body {
   min-height: 100vh;
 }
 
+pre code {
+  border: 1px solid #999;
+  display: block;
+  font-family: Menlo, monospace;
+  padding: 20px;
+  border-radius: 1em;
+  background-color: #282828;
+  color: #f3f3f3;
+}
+
 .body {
   margin: auto;
   width: 900px;
