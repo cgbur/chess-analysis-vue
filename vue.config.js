@@ -1,4 +1,4 @@
 // vue.config.js
 module.exports = {
-  publicPath: '<chess-analysis-vue>'
+  publicPath: '/chess-analysis-vue/'
 };
