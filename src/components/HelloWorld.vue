@@ -1,5 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container" :class="{
+    'home': page === 'home',
+    'about': page === 'about'
+  }">
     <h1 class="header">{{title}}</h1>
   </div>
 </template>
@@ -8,7 +11,8 @@
   export default {
     name: 'HelloWorld',
     props: {
-      title: String
+      title: String,
+      page: String
     }
   }
 </script>
@@ -29,10 +33,14 @@
     clip-path: content-box;
   }
 
-  .container {
-
-    padding-top: 100px;
+  .home {
     background-image: url("../assets/jeshoots-com-fzOITuS1DIQ-unsplash-crop.jpg");
+  }
+  .about {
+    background-image: url("../assets/w6Q5CUU-chess-board-wallpaper.jpg");
+  }
+  .container {
+    padding-top: 100px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld title="Temporal Analysis of Chess"/>
+    <HelloWorld title="Temporal Analysis of Chess" page="home"/>
 
     <div class="body">
       <Legend/>

@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <md-button to="/">Home</md-button>
-      <md-button to="/about">About</md-button>
+      <md-button class="md-raised" to="/">Home</md-button>
+      <md-button class="md-raised" to="/about">About</md-button>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   @import "styles/colors";
 
@@ -16,6 +16,8 @@
   padding: 30px;
   position: fixed;
   bottom: 0;
+  z-index: 3000;
+  opacity: .8;
 
   a {
     font-weight: bold;
