@@ -12,6 +12,13 @@ html, body {
   min-height: 100vh;
 }
 
+.body {
+  margin: auto;
+  width: 900px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 
 @include md-register-theme("default", (

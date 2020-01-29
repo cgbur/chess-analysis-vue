@@ -1,13 +1,15 @@
 <template>
   <div class="container">
-    <h1 class="header">Temporal Analysis of Chess</h1>
+    <h1 class="header">{{title}}</h1>
   </div>
 </template>
 
 <script>
   export default {
     name: 'HelloWorld',
-    props: {}
+    props: {
+      title: String
+    }
   }
 </script>
 

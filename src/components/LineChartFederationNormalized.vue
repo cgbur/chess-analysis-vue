@@ -1,5 +1,18 @@
 <template>
   <div>
+    <h1 class="md-display-1">Players / Population of Country (ten thousands)</h1>
+
+    <p class="md-body-2">Now we have a chart that shows the number of chess players but we are normalizing the data
+    by account for the population of the country in a given year. This should give us a better understanding of how chess popularity
+    varies in a given country. The Y axis of this chart is the number of players per 10,000 people.</p>
+
+    <p class="md-body-2">What may seem shocking at first is the population of chess in Norway. Why would such a small country have so many chess players?
+    Well we didn't choose Norway at random. It is home to the current world champion <a href="https://en.wikipedia.org/wiki/Magnus_Carlsen">Magnus Carlsen</a>
+    who is arguably the best chess player in history.</p>
+
+    <p class="md-body-2">The other thing to note now is that the enormous rise in chess players in India may have just
+    been correlated to the population of the country. Although many of the top youth in India cite V. Anand as their inspiration,
+    there is no real way to tie his success to the success of chess in India.</p>
     <LineChart :chart-data="chartData" :height="200"/>
   </div>
 </template>
@@ -48,7 +61,7 @@
             fill: false,
             data: this.labels.map(year => {
               if (!this.combined[fed][year]) return 0;
-              return this.combined[fed][year].count / this.populations[fed][Math.floor((year - 1975) / 5)]
+              return this.combined[fed][year].count / this.populations[fed][Math.floor((year - 1975) / 5)] * 10
             })
           }
         });
