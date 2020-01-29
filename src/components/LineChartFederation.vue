@@ -1,6 +1,9 @@
 <template>
   <div>
+    <p class="md-body-2">In this section we look at the total number of chess players registered with
+    FIDE.</p>
     <LineChart :chart-data="chartData" :height="200"/>
+
   </div>
 </template>
 

@@ -3,31 +3,7 @@
     <HelloWorld/>
 
     <div class="body">
-      <h1 class="md-display-1" style="margin-bottom: 0">Legend</h1>
-
-      <ul>
-        <li>
-          USA = United States
-        </li>
-        <li>
-          FRA = France
-        </li>
-        <li>
-          NOR = Norway
-        </li>
-        <li>
-          RUS = Russia
-        </li>
-        <li>
-          IND = India
-        </li>
-        <li>
-          CHN = China
-        </li>
-        <li>
-          PUR = Puerto Rico
-        </li>
-      </ul>
+      <Legend/>
       <h1 class="md-display-1">Total Number of Players</h1>
       <LineChartFederation/>
       <h1 class="md-display-1">Total Number of Players / Population of Country (thousands)</h1>
@@ -52,6 +28,7 @@
   import LineChartFederation from "../components/LineChartFederation";
   import LineChartFederationNormalized from "../components/LineChartFederationNormalized";
   import BarChartFederationNormalized from "../components/BarChartFederationNormalized";
+  import Legend from "../components/text/Legend";
 
   export default {
     name: 'home',
@@ -61,6 +38,7 @@
       }
     },
     components: {
+      Legend,
       BarChartFederationNormalized,
       LineChartFederationNormalized,
       LineChartFederation,
