@@ -7,6 +7,14 @@
       <LineChartFederation/>
       <LineChartFederationNormalized/>
       <LineChartFederationTop/>
+      <div class="center">
+        <div>
+          <md-button class="md-primary md-raised r-button" href="r_writeup.html">View R writeup</md-button>
+        </div>
+        <br/>
+        <a href="https://github.com/cgburgess/chess-analysis-vue/tree/master/data">View all of the data used in this
+          writeup</a>
+      </div>
     </div>
   </div>
 </template>
@@ -37,7 +45,13 @@
   }
 
   .center {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+  }
+
+  .r-button {
+    margin-top: 5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    transform: scale(2);
   }
 </style>
