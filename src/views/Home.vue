@@ -14,8 +14,8 @@
           <md-button class="md-accent md-raised r-button" href="r_writeup.html">View R writeup</md-button>
         </div>
         <br/>
-        <a href="https://github.com/cgburgess/chess-analysis-vue/tree/master/data">View all of the data used</a>
-        <a href="https://github.com/cgburgess/chess-analysis-vue/">View this websites source code</a>
+        <a href="https://github.com/cgburgess/chess-analysis-vue/tree/master/data">View all of the data used</a><br/>
+        <a href="https://github.com/cgburgess/chess-analysis-vue/">View this website's source code</a>
       </div>
     </div>
   </div>
