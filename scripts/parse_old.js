@@ -1,22 +1,25 @@
 /**
- * ONLY PARSES UP TO AND INCLUDING 2000
+ * Parses all the files from 1975 to 2000 and generate a json dataset for each
  * @type {module:fs}
  */
 
 const fs = require('fs');
 
+// generate the file names
 let files = [];
 for (let i = 1975; i <= 2000; i++) {
   files.push(`${i}-01.txt`);
 }
 
-
+// execute our parse function on each
 files.forEach(file => {
   parseData(file);
 });
 
 function parseData(filename) {
   console.log(`parsing ${filename}`);
+
+  // get a vec of all the players
   const players = fs
     .readFileSync(`./data/${filename}`)
     .toString()
@@ -27,9 +30,8 @@ function parseData(filename) {
         return true;
       }
     })
-    .map(line => line.replace('\r', ' '))
-
-    .map(line => {
+    .map(line => line.replace('\r', ' ')) // remove windows formatting
+    .map(line => { // pattern match the lines to extract the data with regular expressions
       const federation = line.match(/[A-Z]{3}/gm)[0];
       const rating = line.match(/[^0-9][0-9]{3,4}[^0-9]/gm)[0];
       let name;
@@ -42,7 +44,7 @@ function parseData(filename) {
       return {name, federation, rating: Number(rating.trim())}
     });
 
-
+  // make a new object with keys that are the federations
   const country_data = players.reduce((acc, val) => {
     if (!acc[val.federation]) {
       acc[val.federation] = [val];
@@ -53,6 +55,12 @@ function parseData(filename) {
     return acc;
   }, {});
 
+  // for each federation get the resulting data
+  /**
+   * count: number
+   * best: {name, rating, federation}
+   * average: number
+   */
   for (let countryDataKey in country_data) {
     let data = country_data[countryDataKey];
     country_data[countryDataKey] = {
@@ -68,6 +76,7 @@ function parseData(filename) {
     }
   }
 
+  // save the file
   fs.writeFile(`./json/${filename.split('.')[0]}.json`, JSON.stringify(country_data), 'utf8', function (err) {
     if (err) {
       console.log("An error occured while writing JSON Object to File.");
