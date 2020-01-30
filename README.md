@@ -1,5 +1,7 @@
 # chess-analysis-vue
 
+You can view the website [here](https://cgburgess.github.io/chess-analysis-vue/).
+
 ## Project setup
 ```
 npm install
