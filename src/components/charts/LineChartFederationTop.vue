@@ -131,11 +131,13 @@
 
 <style scoped lang="scss">
   .md-field {
-    width: 200px;
+    min-width: 200px;
+    max-width: 250px;
   }
 
   .options-container {
     display: flex;
+    flex-wrap: wrap;
   }
 
 </style>

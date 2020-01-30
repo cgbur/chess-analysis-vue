@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header title="Methods and Process" page="about"/>
-    <div class="body">
+    <div class="body-container">
       <DataCollection/>
       <AboutLineGraphs/>
     </div>

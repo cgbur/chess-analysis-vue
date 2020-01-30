@@ -57,7 +57,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 400px;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   }
 

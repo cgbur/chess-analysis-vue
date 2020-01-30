@@ -2,18 +2,20 @@
   <div class="home">
     <Header title="Temporal Analysis of Chess" page="home"/>
 
-    <div class="body">
+    <div class="body-container">
+
       <Legend/>
       <LineChartFederation/>
       <LineChartFederationNormalized/>
       <LineChartFederationTop/>
       <div class="center">
         <div>
-          <md-button class="md-primary md-raised r-button" href="r_writeup.html">View R writeup</md-button>
+          <md-button class="md-primary md-raised r-button" href="r_results.html">View R results</md-button>
+          <md-button class="md-accent md-raised r-button" href="r_writeup.html">View R writeup</md-button>
         </div>
         <br/>
-        <a href="https://github.com/cgburgess/chess-analysis-vue/tree/master/data">View all of the data used in this
-          writeup</a>
+        <a href="https://github.com/cgburgess/chess-analysis-vue/tree/master/data">View all of the data used</a>
+        <a href="https://github.com/cgburgess/chess-analysis-vue/">View this websites source code</a>
       </div>
     </div>
   </div>
@@ -50,8 +52,10 @@
 
   .r-button {
     margin-top: 5em;
-    margin-bottom: 1em;
     font-weight: bold;
-    transform: scale(2);
+    z-index: 4000;
+    .md-ripple {
+      padding: 5em !important;
+    }
   }
 </style>
