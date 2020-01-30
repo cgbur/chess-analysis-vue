@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld title="Temporal Analysis of Chess" page="home"/>
+    <Header title="Temporal Analysis of Chess" page="home"/>
 
     <div class="body">
       <Legend/>
@@ -13,25 +13,20 @@
 
 <script>
   // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue'
-  import LineChartFederation from "../components/LineChartFederation";
-  import LineChartFederationNormalized from "../components/LineChartFederationNormalized";
+  import Header from '../components/Header.vue'
   import Legend from "../components/text/Legend";
-  import LineChartFederationTop from "../components/LineChartFederationTop";
+  import LineChartFederationTop from "../components/charts/LineChartFederationTop";
+  import LineChartFederationNormalized from "../components/charts/LineChartFederationNormalized";
+  import LineChartFederation from "../components/charts/LineChartFederation";
 
   export default {
     name: 'home',
-    data: function () {
-      return {
-
-      }
-    },
     components: {
       LineChartFederationTop,
       Legend,
       LineChartFederationNormalized,
       LineChartFederation,
-      HelloWorld
+      Header
     }
   }
 </script>
@@ -40,9 +35,9 @@
   .chart-1 {
     height: 300px;
   }
+
   .center {
     display: flex;
     justify-content: center;
   }
-
 </style>

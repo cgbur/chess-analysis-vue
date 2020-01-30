@@ -1,18 +1,29 @@
 <template>
-  <div class="container" :class="{
-    'home': page === 'home',
-    'about': page === 'about'
-  }">
+  <div class="container" :class="pageClass">
     <h1 class="header">{{title}}</h1>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'Header',
     props: {
       title: String,
       page: String
+    },
+    computed: {
+      // returns the correct class corresponding to page
+      // used to render different header images
+      pageClass: function () {
+        switch (this.page) {
+          case 'home':
+            return 'home';
+          case 'about':
+            return 'about';
+          default:
+            return '';
+        }
+      }
     }
   }
 </script>
@@ -36,9 +47,11 @@
   .home {
     background-image: url("../assets/jeshoots-com-fzOITuS1DIQ-unsplash-crop.jpg");
   }
+
   .about {
     background-image: url("../assets/w6Q5CUU-chess-board-wallpaper.jpg");
   }
+
   .container {
     padding-top: 100px;
     background-size: cover;

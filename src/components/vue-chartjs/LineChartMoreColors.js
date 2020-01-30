@@ -1,24 +1,20 @@
-
-
-  import {Bar, mixins} from "vue-chartjs";
-  // import the plugin core
+  import {Line, mixins} from "vue-chartjs";
   import 'chartjs-plugin-colorschemes/src/plugins/plugin.colorschemes';
-
-  // import a particular color scheme
-  import { BuPu3 } from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.brewer';
+  import { Paired12 } from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.brewer';
 
   const { reactiveProp } = mixins;
 
   export default {
-    extends: Bar,
+    extends: Line,
     mixins: [reactiveProp],
     props: [],
     data() {
       return {
         options: {
+          animation: false,
           plugins: {
             colorschemes: {
-              scheme: BuPu3
+              scheme: Paired12
             }
           }
         }

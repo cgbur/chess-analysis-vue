@@ -1,3 +1,4 @@
+<!--App entry point-->
 <template>
   <div id="app">
     <div id="nav">
@@ -12,20 +13,20 @@
 
   @import "styles/colors";
 
-#nav {
-  padding: 30px;
-  position: fixed;
-  bottom: 0;
-  z-index: 3000;
-  opacity: .8;
+  #nav {
+    padding: 30px;
+    position: fixed;
+    bottom: 0;
+    z-index: 3000;
+    opacity: .8;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: $primary;
+      &.router-link-exact-active {
+        color: $primary;
+      }
     }
   }
-}
 </style>

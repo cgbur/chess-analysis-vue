@@ -13,13 +13,19 @@ html, body {
 }
 
 pre code {
-  border: 1px solid #999;
   display: block;
   font-family: Menlo, monospace;
-  padding: 20px;
-  border-radius: 1em;
+  border-radius: .5em;
   background-color: #282828;
   color: #f3f3f3;
+}
+
+code {
+  color: #444;
+  font-family: Menlo, monospace;
+  background-color: #d9d9d9;
+  padding: 2px;
+  border-radius: 4px;
 }
 
 .body {

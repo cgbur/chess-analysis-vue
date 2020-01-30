@@ -1,10 +1,5 @@
-
-
   import {Line, mixins} from "vue-chartjs";
-  // import the plugin core
   import 'chartjs-plugin-colorschemes/src/plugins/plugin.colorschemes';
-
-  // import a particular color scheme
   import { Paired7 } from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.brewer';
 
   const { reactiveProp } = mixins;

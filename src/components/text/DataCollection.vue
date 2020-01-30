@@ -31,7 +31,7 @@
     </p>
 
     <h2 class="md-display-1">2001-2020</h2>
-    For these years we stopped trying to parse them using javascript alone. The data was make into .csv's by hand and
+    For these years we stopped trying to parse them using javascript alone. The data was made into .csv's by hand and
     then a script was written to parse them into the same JSON format as above. The script for parsing was
     <a href="https://github.com/cgburgess/chess-analysis-vue/blob/master/scripts/parse_csvs.js">parse_csvs.js</a>.
 

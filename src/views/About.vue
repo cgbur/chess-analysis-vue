@@ -1,26 +1,25 @@
 <template>
   <div>
-    <HelloWorld title="Methods and Process" page="about"/>
+    <Header title="Methods and Process" page="about"/>
     <div class="body">
       <DataCollection/>
-
+      <AboutLineGraphs/>
     </div>
   </div>
 </template>
 
 <script>
 
-  import HelloWorld from "../components/HelloWorld";
+  import Header from "../components/Header";
   import DataCollection from "../components/text/DataCollection";
+  import AboutLineGraphs from "../components/text/AboutLineGraphs";
 
   export default {
     name: 'About',
-    data() {
-      return {}
-    },
     components: {
+      AboutLineGraphs,
       DataCollection,
-      HelloWorld
+      Header
     }
   }
 </script>
